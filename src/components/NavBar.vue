@@ -123,6 +123,7 @@ window.addEventListener('scroll', handleScroll);
     align-items: center;
     justify-content: center;
     background-color: #FFC3C3;
+    z-index: 400;
     transition: background-color 0.3s ease;
 }
 .navbar-scrolled {
@@ -188,7 +189,6 @@ window.addEventListener('scroll', handleScroll);
     #nav_list {
         display: none;
     }
-
     #navbar_button {
         display: block;
     }

@@ -9,6 +9,14 @@
             <i class="fa-brands fa-github"/>
             <span><span class="text-warning">Star me</span> on GitHub</span>
         </button>
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
     </section>
     <div id="div_split"></div>
 </template>
@@ -61,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 <style scoped>
 #first_section{
+    position: relative;
     padding-top: 100px;
     height: 500px;
     background-color: #FFC3C3;
@@ -68,6 +77,52 @@ document.addEventListener("DOMContentLoaded", function () {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.bubbles {
+    position: absolute;
+}
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0.7;
+    pointer-events: none;
+}
+.bubble:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    left: -750px;
+    bottom: -90px;
+}
+.bubble:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: -950px;
+    bottom: -200px;
+}
+.bubble:nth-child(3) {
+    width: 290px;
+    height: 290px;
+    left: -1100px;
+    bottom: 60px;
+}
+.bubble:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    left: 700px;
+    bottom: -160px;
+}
+.bubble:nth-child(5) {
+    width: 200px;
+    height: 200px;
+    left: 800px;
+    bottom: -170px;
+}
+.bubble:nth-child(6) {
+    width: 150px;
+    height: 150px;
+    left: 800px;
+    bottom: 70px;
 }
 #typing-text{
     white-space: nowrap;
