@@ -1,12 +1,16 @@
 <template>
     <section id="first_section">
-        <h1 class="fw-bold mb-5">심영조</h1>
-        <h4 class="mb-3 fw-bold">안녕하세요.</h4>
-        <div style="height: 30px;">
+        <h1 class="fw-bold my-5" style="font-family: 'nanum';">심영조</h1>
+        <h4 class="mb-3 fw-bold" style="font-family: 'nanum';">안녕하세요.</h4>
+        <div style="height: 30px; margin-bottom: 70px;">
             <h5 id="typing-text"></h5>
         </div>
-        
+        <button id="github_button" class="btn btn-lg bg-dark text-white">
+            <i class="fa-brands fa-github"/>
+            <span><span class="text-warning">Star me</span> on GitHub</span>
+        </button>
     </section>
+    <div id="div_split"></div>
 </template>
 <script setup>
 import { onMounted } from 'vue';
@@ -56,31 +60,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </script>
 <style scoped>
-#first_section {
-    height: 550px;
+#first_section{
+    padding-top: 100px;
+    height: 500px;
     background-color: #FFC3C3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-#typing-text {
+#typing-text{
     white-space: nowrap;
     overflow: hidden;
     font-weight: bold;
     color: black;
-    border-right: .15em solid black;
-    animation: caret 0.75s step-end infinite;
+    border-right: .1em solid black;
+    font-family: 'nanum';
+    animation: caret 1s step-end infinite;
 }
-
+#div_split{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: linear-gradient(to bottom right, #FFC3C3 50%, #ffffff 50%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+    /* 위쪽은 단색, 아래쪽은 흰색으로 채워질 것입니다 */
+}
+#github_button {
+    font-size: 0.9em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#github_button>i{
+    margin-right: 10px;
+}
+#github_button:hover{
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
 @keyframes caret {
-
-    from,
-    to {
+    from, to {
         border-color: transparent;
     }
-
     50% {
         border-color: black;
     }
