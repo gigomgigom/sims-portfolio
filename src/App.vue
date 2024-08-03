@@ -1,13 +1,15 @@
 <template>
   <div id="root">
     <NavBar/>
-    <Header/>
+    <FirstSection/>
+    <SecondSection/>
   </div>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue';
-import Header from './components/Header.vue';
+import FirstSection from './components/FirstSection.vue';
+import SecondSection from './components/SecondSection.vue';
 </script>
 
 <style>

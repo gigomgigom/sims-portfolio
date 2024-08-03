@@ -155,6 +155,7 @@ window.addEventListener('scroll', handleScroll);
     color: black;
     font-size: 1.7em;
     cursor: pointer;
+    font-family: 'nanum';
 }
 .page_title:hover {
     color: #FF5D5D;
@@ -163,6 +164,7 @@ window.addEventListener('scroll', handleScroll);
 .navbar_link {
     font-size: 0.9em;
     color: black;
+    font-family: 'nanum';
 }
 .navbar_link:hover {
     color: #FF5D5D;
@@ -178,6 +180,7 @@ window.addEventListener('scroll', handleScroll);
     color: black;
     font-size: 1.7em;
     cursor: pointer;
+    font-family: 'nanum';
 }
 .modal-dialog {
     max-width: 80%;

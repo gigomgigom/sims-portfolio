@@ -5,7 +5,7 @@
         <div style="height: 30px; margin-bottom: 70px;">
             <h5 id="typing-text"></h5>
         </div>
-        <button id="github_button" class="btn btn-lg bg-dark text-white">
+        <button id="github_button" class="btn btn-lg">
             <i class="fa-brands fa-github"/>
             <span><span class="text-warning">Star me</span> on GitHub</span>
         </button>
@@ -18,7 +18,7 @@
             <div class="bubble"></div>
         </div>
     </section>
-    <div id="div_split"></div>
+    <div id="div_split" class="mb-5"></div>
 </template>
 <script setup>
 import { onMounted } from 'vue';
@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", function () {
     position: relative;
     background: linear-gradient(to bottom right, #FFC3C3 50%, #ffffff 50%);
     clip-path: polygon(0 0, 100% 0, 0 100%);
-    /* 위쪽은 단색, 아래쪽은 흰색으로 채워질 것입니다 */
 }
 #github_button {
     font-size: 0.9em;
@@ -147,13 +146,16 @@ document.addEventListener("DOMContentLoaded", function () {
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
+    background-color: white;
 }
 #github_button>i{
     margin-right: 10px;
 }
 #github_button:hover{
+    color: white;
+    background-color: black;
     transform: translateY(-5px);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 @keyframes caret {
