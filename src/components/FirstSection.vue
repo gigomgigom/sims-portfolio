@@ -1,5 +1,5 @@
 <template>
-    <section id="first_section">
+    <section id="first_section" class="container-fluid">
         <h1 class="fw-bold my-5" style="font-family: 'nanum';">심영조</h1>
         <h4 class="mb-3 fw-bold" style="font-family: 'nanum';">안녕하세요.</h4>
         <div style="height: 30px; margin-bottom: 70px;">
@@ -30,7 +30,7 @@ onMounted(() => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    const textList = ['배움을 즐기는 신입 개발자입니다.', '항상 발전하려 노력합니다.', '문제가 발생 시 해결하고자 하는 성격이 저의 장점입니다.'];
+    const textList = ['배움을 즐기는 신입 개발자입니다.', '항상 발전하려 노력합니다.', '문제 발생 시 해결하고자 합니다.'];
     let charIndex = 0;
     let currentIndex = 0;
     let currentText = '';

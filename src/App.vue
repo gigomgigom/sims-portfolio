@@ -1,15 +1,15 @@
 <template>
-  <div id="root">
     <NavBar/>
     <FirstSection/>
     <SecondSection/>
-  </div>
+    <ThirdSection/>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue';
 import FirstSection from './components/FirstSection.vue';
 import SecondSection from './components/SecondSection.vue';
+import ThirdSection from './components/ThirdSection.vue';
 </script>
 
 <style>
@@ -21,4 +21,10 @@ import SecondSection from './components/SecondSection.vue';
     margin: 0;
     padding: 0;
   }
+  @font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 </style>
