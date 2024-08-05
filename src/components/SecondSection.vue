@@ -139,6 +139,7 @@ img {
     width: 100%;
     display: inline;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
 img:hover {

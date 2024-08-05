@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
     padding-left: 30px;
     padding-right: 30px;
     background-color: white;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 #github_button>i{
     margin-right: 10px;

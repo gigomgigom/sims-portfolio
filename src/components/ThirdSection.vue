@@ -117,10 +117,11 @@ h1 {
     padding-left: 15px;
     padding-right: 15px;
     background-color: inherit;
+    transition: transform 0.3s ease;
 }
 .card_lift:hover{
     transform: translateY(-25px);
-    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .skill_card {
     padding-left: 24px;
