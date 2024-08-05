@@ -2,48 +2,43 @@
     <Header class="header-global">
         <nav id="navbar-main" class="navbar navbar-expand-lg headroom w-100">
             <div id="container">
-                <a>
-                    <span class="page_title">
+                <div>
+                    <span class="page_title" @click="moveSection(3)">
                         <strong>Sim's</strong>
                         Portfolio
                     </span>
-                </a>
+                </div>
                 <button type="button" id="navbar_button" @click="showNavModal">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <ul class="navbar-nav" id="nav_list">
                     <li class="nav-item">
-                        <button class="nav-link navbar_link">
+                        <button class="nav-link navbar_link" @click="moveSection(0)">
                             About me
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link navbar_link">
+                        <button class="nav-link navbar_link" @click="moveSection(1)">
                             Skills
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link navbar_link">
+                        <button class="nav-link navbar_link" @click="moveSection(2)">
                             Projects
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link navbar_link">
-                            History
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link navbar_link">
+                        <button class="nav-link navbar_link" @click="moveGitHubPage">
                             GitHub
                         </button>
                     </li>
                 </ul>
             </div>
             <div class="modal fade" id="nav_modal" aria-hidden="false">
-                <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
+                <div class="modal-dialog modal-xl border-0">
+                    <div class="modal-content border-0">
                         <div class="modal-header">
-                            <span class="modal_title">
+                            <span class="modal_title" @click="moveSection(3)">
                                 <strong>Sim's</strong>
                                 Portfolio
                             </span>
@@ -52,27 +47,22 @@
                         <div class="modal-body">
                             <ul class="align-items-lg-center ml-lg-auto menu navbar-nav">
                                 <li class="nav-item">
-                                    <button class="nav-link modal_link">
+                                    <button class="nav-link modal_link" @click="moveSection(0)">
                                         About me
                                     </button>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="nav-link modal_link">
+                                    <button class="nav-link modal_link" @click="moveSection(1)">
                                         Skills
                                     </button>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="nav-link modal_link">
+                                    <button class="nav-link modal_link" @click="moveSection(2)">
                                         Projects
                                     </button>
                                 </li>
                                 <li class="nav-item">
-                                    <button class="nav-link modal_link">
-                                        History
-                                    </button>
-                                </li>
-                                <li class="nav-item">
-                                    <button class="nav-link modal_link">
+                                    <button class="nav-link modal_link" @click="moveGitHubPage">
                                         GitHub
                                     </button>
                                 </li>
@@ -86,7 +76,7 @@
 </template>
 <script setup>
 import { Modal } from 'bootstrap';
-import { onMounted, ref } from 'vue';
+import { onMounted } from 'vue';
 
 let navBarContainer = null;
 let navBarModal = null;
@@ -115,6 +105,13 @@ function handleScroll() {
 //스크롤 이벤트 리스너
 window.addEventListener('scroll', handleScroll);
 
+const sections = ['about_me', 'skills', 'project', 'first_section'];
+function moveSection(index) {
+    document.getElementById(sections[index]).scrollIntoView({behavior: 'smooth'});
+}
+const moveGitHubPage = () => {
+    window.open('https://github.com/gigomgigom');
+}
 </script>
 <style scoped>
 #navbar-main {
@@ -163,11 +160,6 @@ window.addEventListener('scroll', handleScroll);
     font-size: 1.7em;
     cursor: pointer;
     font-family: 'nanum';
-}
-
-.page_title:hover {
-    color: #FF5D5D;
-    transition: color 0.3s ease;
 }
 
 .navbar_link {

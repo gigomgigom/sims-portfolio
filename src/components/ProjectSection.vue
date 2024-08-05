@@ -29,10 +29,6 @@
                                     <table>
                                         <tbody>
                                             <tr>
-                                                <td class="parts">Back</td>
-                                                <td>Spring boot</td>
-                                            </tr>
-                                            <tr>
                                                 <td class="parts">Front</td>
                                                 <td>Vue, JS, Axios, CSS, Bootstrap</td>
                                             </tr>
@@ -43,7 +39,7 @@
                                         </tbody>
                                     </table>
                                     <div class="icon mt-5">
-                                        <i class="fa-2xl fa-brands fa-square-github"></i>
+                                        <i class="fa-2xl fa-brands fa-square-github" @click="moveGitHubPage(0)"></i>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +57,7 @@
                                     <br>
                                     <span>활동기관 : 한국소프트웨어산업협회</span>
                                     <br>
-                                    <span>개발인원 : 3명</span>
+                                    <span>개발인원 : 4명</span>
                                     <div class="mb-5">
                                         <span>
                                             <strong>SocialPulse는 봉사 참여 서비스 웹 어플리케이션(SPA)입니다.</strong>
@@ -97,8 +93,9 @@
                                         </tbody>
                                     </table>
                                     <div class="icon mt-5">
-                                        <i class="fa-2xl fa-brands fa-square-github me-4"></i>
-                                        <i class="fa-2xl fa-solid fa-circle-info" style="color: #FF5D5D;"></i>
+                                        <i class="fa-2xl fa-brands fa-square-github me-4" @click="moveGitHubPage(1)"></i>
+                                        <i class="fa-2xl fa-solid fa-circle-info me-4" style="color: #FF5D5D;"></i>
+                                        <i class="fa-2xl fa-solid fa-file-arrow-down" style="color: #FF5D5D;" @click="fileDownload(0)"></i>
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +113,7 @@
                                     <br>
                                     <span>활동기관 : 한국소프트웨어산업협회</span>
                                     <br>
-                                    <span>개발인원 : 3명</span>
+                                    <span>개발인원 : 4명</span>
                                     <div class="mb-5">
                                         <span>
                                             <strong>멍슐랭은 애견용 식품 판매 쇼핑몰 웹 어플리케이션(MPA)입니다</strong>
@@ -151,7 +148,7 @@
                                         </tbody>
                                     </table>
                                     <div class="icon mt-5">
-                                        <i class="fa-2xl fa-brands fa-square-github me-4"></i>
+                                        <i class="fa-2xl fa-brands fa-square-github me-4" @click="moveGitHubPage(2)"></i>
                                         <i class="fa-2xl fa-solid fa-circle-info" style="color: #FF5D5D;"></i>
                                     </div>
                                 </div>
@@ -208,8 +205,9 @@
                                         </tbody>
                                     </table>
                                     <div class="icon mt-5">
-                                        <i class="fa-2xl fa-brands fa-square-github me-4"></i>
-                                        <i class="fa-2xl fa-solid fa-circle-info" style="color: #FF5D5D;"></i>
+                                        <i class="fa-2xl fa-brands fa-square-github me-4" @click="moveGitHubPage(3)"></i>
+                                        <i class="fa-2xl fa-solid fa-circle-info me-4" style="color: #FF5D5D;"></i>
+                                        <i class="fa-2xl fa-solid fa-file-arrow-down" style="color: #FF5D5D;" @click="fileDownload(1)"></i>
                                     </div>
                                 </div>
                             </div>
@@ -221,7 +219,75 @@
     </section>
 </template>
 <script setup>
+    
+const projects = [
+    {
+        projectName : 'Portfolio',
+        githubUrl : 'https://github.com/gigomgigom/sims-portfolio'
+    },
+    {
+        projectName : 'SocialPulse',
+        githubUrl : 'https://github.com/gigomgigom/front_end_volunteer',
+        information : [
+            {
+                title: '',
+                description: ''
+            },
+            {
+                title: '',
+                description: ''
+            }
+        ]
+    },
+    {
+        projectName : 'Mung Chelin',
+        githubUrl : 'https://github.com/gigomgigom/KOSA_ShoppingMall',
+        information : [
+            {
+                title: '',
+                description: ''
+            },
+            {
+                title: '',
+                description: ''
+            }
+        ]
+    },
+    {
+        projectName : 'Hew-Eat',
+        githubUrl : 'https://github.com/gigomgigom/RPOrderApp',
+        information : [
+            {
+                title: '',
+                description: ''
+            },
+            {
+                title: '',
+                description: ''
+            }
+        ]
+    }
+]
 
+const moveGitHubPage = (index) => {
+    window.open(projects[index].githubUrl);
+}
+const files = [
+    {
+        url : '/download/SocialPulse.pdf',
+        fileName: 'SocialPulse.pdf'
+    },
+    {
+        url: '/download/HewEat.pdf',
+        fileName: 'HewEat.pdf'
+    }
+];
+const fileDownload = (index) => {
+    const link = document.createElement('a');
+    link.href = files[index].url;
+    link.download = files[index].fileName;
+    link.click();
+}
 </script>
 <style scoped>
 h1 {
@@ -244,6 +310,9 @@ p {
 }
 tr {
     margin-bottom: 10px;
+}
+i {
+    cursor: pointer;
 }
 .shadow-hover {
     border: none;

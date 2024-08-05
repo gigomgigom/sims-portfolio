@@ -5,7 +5,7 @@
         <div style="height: 30px; margin-bottom: 70px;">
             <h5 id="typing-text"></h5>
         </div>
-        <button id="github_button" class="btn btn-lg">
+        <button id="github_button" class="btn btn-lg" @click="moveGitHubPage">
             <i class="fa-brands fa-github"/>
             <span><span class="text-warning">Star me</span> on GitHub</span>
         </button>
@@ -66,6 +66,9 @@ document.addEventListener("DOMContentLoaded", function () {
     typeAnimation();
 });
 
+const moveGitHubPage = () => {
+    window.open('https://github.com/gigomgigom');
+}
 </script>
 <style scoped>
 #first_section{

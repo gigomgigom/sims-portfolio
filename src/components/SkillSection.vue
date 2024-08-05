@@ -1,5 +1,5 @@
 <template>
-    <section class="container-fluid">
+    <section class="container-fluid" id="skills">
         <div class="container">
             <h1>Skills</h1>
             <div class="d-flex justify-content-center row">
