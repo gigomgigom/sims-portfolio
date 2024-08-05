@@ -14,10 +14,10 @@
                                     </h3>
                                 </div>
                                 <div class="img">
-                                    <img src="@/assets/springBoot.png" alt="springBoot" style="width: 100%;"/>
-                                    <img src="@/assets/java.png" alt="java" style="width: 50%;"/>
-                                    <img src="@/assets/mybatis.png" alt="mybatis" style="width: 50%;"/>
-                                    <img src="@/assets/jwt.png" alt="jwt" style="width: 100%;"/>
+                                    <img src="@/assets/skills/springBoot.png" alt="springBoot" style="width: 100%;"/>
+                                    <img src="@/assets/skills/java.png" alt="java" style="width: 50%;"/>
+                                    <img src="@/assets/skills/mybatis.png" alt="mybatis" style="width: 50%;"/>
+                                    <img src="@/assets/skills/jwt.png" alt="jwt" style="width: 100%;"/>
                                 </div>
                             </div>
                         </div>
@@ -30,8 +30,8 @@
                                     </h3>
                                 </div>
                                 <div class="img">
-                                    <img src="@/assets/git.png" alt="git" style="width: 100%;"/>
-                                    <img src="@/assets/github.png" alt="github" style="width: 100%;"/>
+                                    <img src="@/assets/skills/git.png" alt="git" style="width: 100%;"/>
+                                    <img src="@/assets/skills/github.png" alt="github" style="width: 100%;"/>
                                 </div>
                             </div>
                         </div>
@@ -48,13 +48,13 @@
                                     </h3>
                                 </div>
                                 <div class="img pt-3">
-                                    <img src="@/assets/HTML.png" alt="html" style="width: 50%;"/>
-                                    <img src="@/assets/CSS.png" alt="css" style="width: 50%;"/>
-                                    <img src="@/assets/js2.png" alt="js" style="width: 50%;"/>
-                                    <div style="width: 50%;"></div>
-                                    <img src="@/assets/flutter.png" alt="flutter" style="width: 100%;" class="mt-2"/>
-                                    <img src="@/assets/Vue.png" alt="vue" style="width: 50%;"/>
-                                    <img src="@/assets/vuex.png" alt="vuex" style="width: 50%;"/>
+                                    <img src="@/assets/skills/HTML.png" alt="html" style="width: 50%;"/>
+                                    <img src="@/assets/skills/CSS.png" alt="css" style="width: 50%;"/>
+                                    <img src="@/assets/skills/js2.png" alt="js" style="width: 50%;"/>
+                                    <img src="@/assets/skills/bootstrap.png" alt="bootstrap" style="width: 50%;"/>
+                                    <img src="@/assets/skills/flutter.png" alt="flutter" style="width: 100%;" class="mt-2"/>
+                                    <img src="@/assets/skills/Vue.png" alt="vue" style="width: 50%;"/>
+                                    <img src="@/assets/skills/vuex.png" alt="vuex" style="width: 50%;"/>
                                 </div>
                             </div>
                         </div>
@@ -71,8 +71,9 @@
                                     </h3>
                                 </div>
                                 <div class="img pt-3">
-                                    <img src="@/assets/docker.png" alt="docker" style="width: 100%;"/>
-                                    <img src="@/assets/msa.png" alt="msa" style="width: 100%;"/>
+                                    <img src="@/assets/skills/docker.png" alt="docker" style="width: 100%;"/>
+                                    <img src="@/assets/skills/msa.png" alt="msa" style="width: 100%;"/>
+                                    <img src="@/assets/skills/nginx.png" alt="nginx" style="width: 100%;"/>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +88,7 @@
                                     </h3>
                                 </div>
                                 <div class="img pt-3">
-                                    <img src="@/assets/oracledb.png" alt="oracledb" style="width: 100%;"/>
+                                    <img src="@/assets/skills/oracledb.png" alt="oracledb" style="width: 100%;"/>
                                 </div>
                             </div>
                         </div>

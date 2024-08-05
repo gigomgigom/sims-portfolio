@@ -3,13 +3,15 @@
     <FirstSection/>
     <SecondSection/>
     <ThirdSection/>
+    <ProjectSection/>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue';
-import FirstSection from './components/FirstSection.vue';
-import SecondSection from './components/SecondSection.vue';
-import ThirdSection from './components/ThirdSection.vue';
+import FirstSection from './components/GreetingSection.vue';
+import SecondSection from './components/AboutMeSection.vue';
+import ThirdSection from './components/SkillSection.vue';
+import ProjectSection from './components/ProjectSection.vue';
 </script>
 
 <style>
