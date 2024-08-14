@@ -99,10 +99,14 @@
     </section>
 </template>
 <script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+
+});
 </script>
 <style scoped>
 section {
-    background-color: #edebeb;
     padding-top: 70px;
     padding-bottom: 70px;
 }

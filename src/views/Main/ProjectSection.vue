@@ -219,7 +219,11 @@
     </section>
 </template>
 <script setup>
-    
+import { onMounted } from 'vue';
+
+onMounted(() => {
+
+});
 const projects = [
     {
         projectName : 'Portfolio',
@@ -230,8 +234,8 @@ const projects = [
         githubUrl : 'https://github.com/gigomgigom/front_end_volunteer',
         information : [
             {
-                title: '',
-                description: ''
+                title: 'SPA 방식 채택',
+                description: 'SPA방식을 사용함으로써 빠른 페이지 이동 및 간소화된 개발 프로세스의 이점을 갖고 개발하였습니다.'
             },
             {
                 title: '',

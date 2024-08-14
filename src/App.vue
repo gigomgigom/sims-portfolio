@@ -1,19 +1,12 @@
 <template>
     <NavBar/>
-    <FirstSection/>
-    <SecondSection/>
-    <ThirdSection/>
-    <ProjectSection/>
+    <router-view/>
     <Footer/>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue';
-import FirstSection from './components/GreetingSection.vue';
-import SecondSection from './components/AboutMeSection.vue';
-import ThirdSection from './components/SkillSection.vue';
-import ProjectSection from './components/ProjectSection.vue';
-import Footer from './components/Footer.vue'
+import Footer from './components/Footer.vue';
 </script>
 
 <style>

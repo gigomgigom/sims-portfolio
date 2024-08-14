@@ -3,7 +3,7 @@
         <nav id="navbar-main" class="navbar navbar-expand-lg headroom w-100">
             <div id="container">
                 <div>
-                    <span class="page_title" @click="moveSection(3)">
+                    <span class="page_title" @click="moveSection(0)">
                         <strong>Sim's</strong>
                         Portfolio
                     </span>
@@ -38,7 +38,7 @@
                 <div class="modal-dialog modal-xl border-0">
                     <div class="modal-content border-0">
                         <div class="modal-header">
-                            <span class="modal_title" @click="moveSection(3)">
+                            <span class="modal_title" @click="moveSection(0)">
                                 <strong>Sim's</strong>
                                 Portfolio
                             </span>
@@ -75,6 +75,7 @@
     </Header>
 </template>
 <script setup>
+import router from '@/router';
 import { Modal } from 'bootstrap';
 import { onMounted } from 'vue';
 
@@ -105,9 +106,10 @@ function handleScroll() {
 //스크롤 이벤트 리스너
 window.addEventListener('scroll', handleScroll);
 
-const sections = ['about_me', 'skills', 'project', 'first_section'];
+const sections = ['about_me', 'skill', 'project'];
 function moveSection(index) {
-    document.getElementById(sections[index]).scrollIntoView({behavior: 'smooth'});
+    router.push(`/main/${sections[index]}`);
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
 const moveGitHubPage = () => {
     window.open('https://github.com/gigomgigom');

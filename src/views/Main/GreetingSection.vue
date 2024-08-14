@@ -27,9 +27,10 @@ let typingText = null;
 
 onMounted(() => {
     typingText = document.getElementById('typing-text');
+    textAnimation();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+const textAnimation = () => {
     const textList = ['배움을 즐기는 신입 개발자입니다.', '항상 발전하려 노력합니다.', '문제 발생 시 해결하고자 합니다.'];
     let charIndex = 0;
     let currentIndex = 0;
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     typeAnimation();
-});
+}
 
 const moveGitHubPage = () => {
     window.open('https://github.com/gigomgigom');
