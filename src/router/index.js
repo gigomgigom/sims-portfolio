@@ -14,6 +14,11 @@ const routes = [
     children: [
       ...mainpage
     ]
+  },
+  //Article
+  {
+    path: '/article',
+    component: () => import(/* webpackChunkName: "Article" */ '@/views/Article'),
   }
 ]
 

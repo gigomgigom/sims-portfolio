@@ -1,0 +1,168 @@
+<template>
+    <section id="first_section" class="container-fluid">
+        <h1 class="fw-bold my-5" style="font-family: 'nanum';">Sim's Log</h1>
+        <h4 class="mb-3 fw-bold" style="font-family: 'nanum';">오늘은 뭘 적었을까?</h4>
+        <div style="height: 30px; margin-bottom: 70px;">
+            <h5 id="typing-text"></h5>
+        </div>
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+    </section>
+    <div id="div_split" class="mb-5"></div>
+</template>
+<script setup>
+import { onMounted } from 'vue';
+
+let typingText = null;
+
+onMounted(() => {
+    typingText = document.getElementById('typing-text');
+    textAnimation();
+});
+
+const textAnimation = () => {
+    const textList = ['Spring Boot, Spring Security, JWT, MyBatis, JPA', 'JS, Vue, React, Angular', 'Deployment, Version Control, DB', 'Troubleshooting'];
+    let charIndex = 0;
+    let currentIndex = 0;
+    let currentText = '';
+    let isTypeUnfinished = true;
+    
+    function typeAnimation() {
+        currentText = textList[currentIndex];
+        if(isTypeUnfinished) {
+            if(charIndex < currentText.length) {{
+                typingText.innerHTML += currentText.charAt(charIndex);
+                charIndex++;
+                setTimeout(typeAnimation, 20);
+            }} else {
+                isTypeUnfinished = false;
+                setTimeout(typeAnimation, 1500);
+            }
+        } else {
+            if (charIndex > 0) {
+                typingText.innerHTML = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(typeAnimation, 20);
+            } else {
+                isTypeUnfinished = true;
+                if(currentIndex+1 === textList.length) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = (currentIndex + 1) % textList.length;
+                }
+                setTimeout(typeAnimation, 1500);
+            }
+        }
+    }
+    typeAnimation();
+}
+
+const selectCtg = () => {
+    //카테고리 이동
+}
+</script>
+<style scoped>
+#first_section{
+    position: relative;
+    padding-top: 100px;
+    height: 500px;
+    background-color: #FFC3C3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bubbles {
+    position: absolute;
+}
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    opacity: 0.7;
+    pointer-events: none;
+}
+.bubble:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    left: -750px;
+    bottom: -90px;
+}
+.bubble:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: -950px;
+    bottom: -200px;
+}
+.bubble:nth-child(3) {
+    width: 290px;
+    height: 290px;
+    left: -1100px;
+    bottom: 60px;
+}
+.bubble:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    left: 700px;
+    bottom: -160px;
+}
+.bubble:nth-child(5) {
+    width: 200px;
+    height: 200px;
+    left: 800px;
+    bottom: -170px;
+}
+.bubble:nth-child(6) {
+    width: 150px;
+    height: 150px;
+    left: 800px;
+    bottom: 70px;
+}
+#typing-text{
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+    color: black;
+    border-right: .1em solid black;
+    font-family: 'nanum';
+    animation: caret 1s step-end infinite;
+}
+#div_split{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background: linear-gradient(to bottom right, #FFC3C3 50%, #ffffff 50%);
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+#ctg_button {
+    font-size: 0.9em;
+    font-family: 'nanum';
+    padding-top: 14px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+#ctg_button:hover{
+    color: white;
+    background-color: black;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+@keyframes caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+</style>

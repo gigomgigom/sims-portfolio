@@ -1,12 +1,14 @@
 <template>
     <NavBar/>
     <router-view/>
+    <ToTopButton/>
     <Footer/>
 </template>
 
 <script setup>
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
+import ToTopButton from './components/ToTopButton.vue';
 </script>
 
 <style>
@@ -23,5 +25,5 @@ import Footer from './components/Footer.vue';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+  }
 </style>

@@ -28,6 +28,11 @@
                         </button>
                     </li>
                     <li class="nav-item">
+                        <button class="nav-link navbar_link" @click="moveSection(3)">
+                            Article
+                        </button>
+                    </li>
+                    <li class="nav-item">
                         <button class="nav-link navbar_link" @click="moveGitHubPage">
                             GitHub
                         </button>
@@ -59,6 +64,11 @@
                                 <li class="nav-item">
                                     <button class="nav-link modal_link" @click="moveSection(2)">
                                         Projects
+                                    </button>
+                                </li>
+                                <li class="nav-item">
+                                    <button class="nav-link modal_link" @click="moveSection(3)">
+                                        Article
                                     </button>
                                 </li>
                                 <li class="nav-item">
@@ -108,8 +118,13 @@ window.addEventListener('scroll', handleScroll);
 
 const sections = ['about_me', 'skill', 'project'];
 function moveSection(index) {
-    router.push(`/main/${sections[index]}`);
-    window.scrollTo({top: 0, behavior: 'smooth'});
+    if (index != 3) {
+        router.push(`/main/${sections[index]}`);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        router.push('/article');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }
 const moveGitHubPage = () => {
     window.open('https://github.com/gigomgigom');
@@ -204,6 +219,7 @@ const moveGitHubPage = () => {
         display: block;
     }
 }
+
 @media only screen and (max-width: 576px) {
     #container {
         width: 90%;
