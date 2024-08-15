@@ -1,5 +1,5 @@
 <template>
-    <Header class="header-global">
+    <header class="header-global">
         <nav id="navbar-main" class="navbar navbar-expand-lg headroom w-100">
             <div id="container">
                 <div>
@@ -82,7 +82,7 @@
                 </div>
             </div>
         </nav>
-    </Header>
+    </header>
 </template>
 <script setup>
 import router from '@/router';

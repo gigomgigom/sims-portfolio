@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import mainpage from './mainpage';
+import article from './article';
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
   {
     path: '/article',
     component: () => import(/* webpackChunkName: "Article" */ '@/views/Article'),
+    redirect: '/article/list',
+    children: [
+      ...article
+    ]
   }
 ]
 

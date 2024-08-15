@@ -1,7 +1,7 @@
 <template>
     <section id="first_section" class="container-fluid">
         <h1 class="fw-bold my-5" style="font-family: 'nanum';">Sim's Log</h1>
-        <h4 class="mb-3 fw-bold" style="font-family: 'nanum';">오늘은 뭘 적었을까?</h4>
+        <h4 class="mb-3 fw-bold" style="font-family: 'nanum';">학습 기록 공간입니다.</h4>
         <div style="height: 30px; margin-bottom: 70px;">
             <h5 id="typing-text"></h5>
         </div>
@@ -61,10 +61,6 @@ const textAnimation = () => {
         }
     }
     typeAnimation();
-}
-
-const selectCtg = () => {
-    //카테고리 이동
 }
 </script>
 <style scoped>
@@ -139,23 +135,6 @@ const selectCtg = () => {
     position: relative;
     background: linear-gradient(to bottom right, #FFC3C3 50%, #ffffff 50%);
     clip-path: polygon(0 0, 100% 0, 0 100%);
-}
-#ctg_button {
-    font-size: 0.9em;
-    font-family: 'nanum';
-    padding-top: 14px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: white;
-    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
-}
-#ctg_button:hover{
-    color: white;
-    background-color: black;
-    transform: translateY(-5px);
-    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 @keyframes caret {
     from, to {
