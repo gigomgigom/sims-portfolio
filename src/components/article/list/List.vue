@@ -13,9 +13,8 @@
                                 <span class="me-3" style="font-weight: bold;">
                                     @GigomGigom
                                 </span>
-                                2024.08.15
-                                <i class="fa-regular fa-eye ms-4"></i>
-                                10
+                                <span class="me-4">2024.08.15</span>
+                                <i class="fa-regular fa-eye">  10</i>
                             </p>
                             <p>
                                 분산 락이란? 자바 스프링 기반의 웹 애플리케이션은 기본적으로 멀티 쓰레드 환경에서 구동된다. 따라서 여러 쓰레드가 함께 접근할 수 있는 공유자원에 대해 경쟁
@@ -63,6 +62,7 @@ section {
     padding-top: 50px;
     padding-bottom: 30px;
     border-bottom: #edebeb 1px solid;
+    min-height: 320px;
 }
 
 .article_title {
@@ -113,6 +113,7 @@ section {
 }
 
 .article_image {
-    width: 40%;
+    width: 60%;
+    max-height: 320px;
 }
 </style>

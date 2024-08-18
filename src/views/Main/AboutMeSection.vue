@@ -111,7 +111,6 @@ onMounted(() => {
     display: flex;
     justify-content: center;
 }
-
 .item {
     display: flex;
     justify-content: center;
@@ -119,39 +118,32 @@ onMounted(() => {
     margin-top: 20px;
     padding-left: 15px;
 }
-
 .icon {
     margin-right: 30px;
 }
-
 .info_text {
     text-align: left;
     width: 220px;
     font-family: 'nanum';
     font-size: 1.2em;
 }
-
 #about_box {
     display: flex;
 }
-
 h1 {
     font-family: 'yg-jalnan';
 }
-
 img {
     width: 100%;
     display: inline;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
-
 img:hover {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
 }
-
 @media (max-width: 576px) {
 
 /* 작은 화면 (스마트폰 등) */
