@@ -7,6 +7,7 @@
 </template>
 <script setup>
 import { onMounted } from 'vue';
+import articleAPI from '@/apis/articleAPI';
 
 onMounted(() => {
     if (!window.summernote) {
@@ -49,6 +50,9 @@ const loadEditor = () => {
             ['view', ['codeview', 'help']]
         ],
         callbacks: {
+            //이미지 삭제에요! 한번 츄라이츄라이!
+            //해요해요! 완전 강추!
+            //https://sirobako.co.kr/detail/48
             onImageUpload : (files) => {
                 uploadSummernoteImageFile(files[0]);
             },
@@ -65,14 +69,21 @@ const loadEditor = () => {
         }
     })
 }
-const uploadSummernoteImageFile = (file) => {
+const uploadSummernoteImageFile = async (file) => {
     console.log('파일 업로드 핸들러 실행', file);
     /*
     MultipartForm에 의한 폼 데이터 생성
     $(editor).summernote('insertImage', [응답의 데이터]data.url);
     */
-    // eslint-disable-next-line
-    $('#text_editor').summernote('insertImage', 'https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fenf8cG%2FbtqBIHrOlQq%2F7nsHJAsIXzwtKEvXb1HByK%2Fimg.png');
+    const formData = new FormData();
+    formData.append('file', file);
+    const response = await articleAPI.uploadImg(formData);
+    console.log(response.data);
+    if(response.data !== null && response.data !== '') {
+        let imageUrl = response.data;
+        // eslint-disable-next-line
+        $('#text_editor').summernote('insertImage', 'http://localhost'+imageUrl);
+    }
 }
 </script>
 <style scoped>
