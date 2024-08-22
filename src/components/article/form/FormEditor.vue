@@ -50,9 +50,6 @@ const loadEditor = () => {
             ['view', ['codeview', 'help']]
         ],
         callbacks: {
-            //이미지 삭제에요! 한번 츄라이츄라이!
-            //해요해요! 완전 강추!
-            //https://sirobako.co.kr/detail/48
             onImageUpload : (files) => {
                 uploadSummernoteImageFile(files[0]);
             },
@@ -65,6 +62,16 @@ const loadEditor = () => {
                         e.preventDefault();
                     }
                 }
+            },
+            //클릭해서 직접 이미지를 삭제해야함.
+            onMediaDelete : async function (target) {
+                var deletedImageUrl = target.attr('src');
+                const parts = deletedImageUrl.split("/");
+
+                const date = parts[parts.length - 2];
+                const fileName = parts[parts.length - 1];
+
+                articleAPI.deleteImg(date, fileName);
             }
         }
     })

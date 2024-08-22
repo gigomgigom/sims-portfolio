@@ -5,7 +5,7 @@
             <div class="d-flex justify-content-center row">
                 <div class="col-lg-4 skill-col">
                     <div class="col-lg-12">
-                        <div class="card_lift card border-0 mb-5">
+                        <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="card_lift card border-0 mb-5">
                             <div class="pt-5 pb-3 skill_card shadow">
                                 <div class="title" style="color: green;">
                                     <i class="fa-solid fa-2xl fa-computer me-3"></i>
@@ -21,7 +21,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card_lift card border-0 mb-5">
+                        <div data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" class="card_lift card border-0 mb-5">
                             <div class="pt-5 pb-3 skill_card shadow">
                                 <div class="title">
                                     <i class="fa-solid fa-2xl fa-code-compare me-3"></i>
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-lg-4 skill-col">
                     <div class="col-lg-12">
-                        <div class="card_lift card border-0 mb-5">
+                        <div data-aos="fade-up" data-aos-duration="1500" data-aos-once="true" class="card_lift card border-0 mb-5">
                             <div class="pt-5 pb-3 skill_card shadow">
                                 <div class="title" style="color: orange;">
                                     <i class="fa-solid fa-2xl fa-computer me-3"></i>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="col-lg-4 skill-col">
                     <div class="col-lg-12">
-                        <div class="card_lift card border-0 mb-5">
+                        <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" class="card_lift card border-0 mb-5">
                             <div class="pt-5 pb-3 skill_card shadow">
                                 <div class="title" style="color: blue;">
                                     <i class="fa-solid fa-2xl fa-server me-3"></i>
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <div class="card_lift card border-0 mb-5">
+                        <div data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" class="card_lift card border-0 mb-5">
                             <div class="pt-5 pb-3 skill_card shadow">
                                 <div class="title" style="color: red;">
                                     <i class="fa-solid fa-2xl fa-database me-3"></i>
