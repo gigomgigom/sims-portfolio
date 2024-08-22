@@ -5,11 +5,11 @@
                 <h1>About Me</h1>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4 d-flex align-items-center my-4">
-                <div id="my_profile">
+                <div data-aos="fade-right" data-aos-duration="2000" id="my_profile">
                     <img src="@/assets/MyPhoto.jpg" alt="myPhoto" class="profile-img img-fluid" />
                 </div>
             </div>
-            <div id="about_box" class="col-sm-12 col-md-6 col-lg-8">
+            <div data-aos="fade-left" data-aos-duration="2000" id="about_box" class="col-sm-12 col-md-6 col-lg-8">
                 <div class="row">
                     <div class="item col-md-12 col-lg-6">
                         <div class="icon">

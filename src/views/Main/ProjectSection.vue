@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1>PROJECT</h1>
-                    <div class="shadow-hover my-2 card">
+                    <div data-aos="zoom-in" data-aos-duration="700" class="shadow-hover my-2 card">
                         <div class="card-body p-5">
                             <div class="row">
                                 <div class="bg_img col-lg-7 mb-5">
@@ -45,7 +45,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shadow-hover my-2 card">
+                    <div data-aos="zoom-in" data-aos-duration="700" class="shadow-hover my-2 card">
                         <div class="card-body p-5">
                             <div class="row">
                                 <div class="bg_img col-lg-7 mb-5">
@@ -101,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shadow-hover my-2 card">
+                    <div data-aos="zoom-in" data-aos-duration="700" class="shadow-hover my-2 card">
                         <div class="card-body p-5">
                             <div class="row">
                                 <div class="bg_img col-lg-7 mb-5">
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shadow-hover my-2 card">
+                    <div data-aos="zoom-in" data-aos-duration="700" class="shadow-hover my-2 card">
                         <div class="card-body p-5">
                             <div class="row">
                                 <div class="bg_img col-lg-7 mb-5">

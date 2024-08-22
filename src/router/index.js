@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import mainpage from './mainpage';
 import article from './article';
+import Aos from 'aos';
 
 const routes = [
   {
@@ -32,4 +33,8 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  Aos.init();
+  next();
+})
 export default router
