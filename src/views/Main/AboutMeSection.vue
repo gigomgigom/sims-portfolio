@@ -1,4 +1,5 @@
 <template>
+    <div>
     <section id="about_me" class="container py-5">
         <div class="row">
             <div class="col-lg-12 mb-5">
@@ -93,10 +94,12 @@
             </div>
         </div>
     </section>
+    <History/>
+    </div>
 </template>
 <script setup>
 import { onMounted } from 'vue';
-
+import History from '@/components/history.vue';
 onMounted(() => {
 
 });
