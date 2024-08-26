@@ -88,7 +88,8 @@
                                     </h3>
                                 </div>
                                 <div class="img pt-3">
-                                    <img src="@/assets/skills/oracledb.png" alt="oracledb" style="width: 100%;"/>
+                                    <img src="@/assets/skills/oracledb.png" alt="oracledb" style="width: 50%;"/>
+                                    <img src="@/assets/skills/mysql.png" alt="mysql" style="width: 50%;"/>
                                 </div>
                             </div>
                         </div>
