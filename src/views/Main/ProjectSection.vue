@@ -8,6 +8,28 @@
                         <div class="card-body p-5">
                             <div class="row">
                                 <div class="bg_img col-lg-7 mb-5">
+                                    <img src="@/assets/project/danbi.png" alt="protfolio" width="100%"/>
+                                </div>
+                                <div class="content col-lg-5">
+                                    <p>Danbi Edu CATS Bill</p>
+                                    <span>개발기간 : 2024.10.01 ~ </span>
+                                    <br>
+                                    <span>활동기관 : 컴버스</span>
+                                    <div class="mb-5">
+                                        <span>
+                                            <strong>Danbi Edu CATS 주문/결제 서비스 개발 및 유지보수</strong>
+                                            <br>
+                                            BILL 서비스 신규 기능 개발 및 유지보수 업무 수행
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true" class="shadow-hover my-2 card">
+                        <div class="card-body p-5">
+                            <div class="row">
+                                <div class="bg_img col-lg-7 mb-5">
                                     <img src="@/assets/project/portfolio.png" alt="protfolio" width="100%"/>
                                 </div>
                                 <div class="content col-lg-5">

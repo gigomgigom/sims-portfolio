@@ -14,7 +14,7 @@
                             <p class="info">시작: 2024-08<br></p>
                         </div>
                         <div class="col-md-6 text-center d-flex align-items-center justify-content-center">
-                            <p class="info">웹 어플리케이션 개발(인턴)</p>
+                            <p class="info">웹 어플리케이션 개발(사원)</p>
                         </div>
                     </div>
                 </div>
